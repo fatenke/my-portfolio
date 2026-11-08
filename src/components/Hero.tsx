@@ -1,6 +1,9 @@
 import { ArrowRight, BrainCircuit, Cloud } from 'lucide-react'
-import { motion, useReducedMotion, type Variants } from 'framer-motion'
+import { AnimatePresence, motion, useReducedMotion, type Variants } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import { site } from '../config/site'
+
+const specialties = ['Cloud & Infrastructure', 'DevOps & Automation', 'AI Engineering']
 
 const heroTextVariants: Variants = {
   hidden: {},
@@ -20,6 +23,17 @@ const heroItemVariants: Variants = {
 
 export function Hero() {
   const prefersReducedMotion = useReducedMotion()
+  const [activeSpecialty, setActiveSpecialty] = useState(0)
+
+  useEffect(() => {
+    if (prefersReducedMotion) return
+
+    const intervalId = window.setInterval(() => {
+      setActiveSpecialty((current) => (current + 1) % specialties.length)
+    }, 1000)
+
+    return () => window.clearInterval(intervalId)
+  }, [prefersReducedMotion])
 
   return (
     <section id="home" className="hero-intro">
@@ -69,11 +83,15 @@ export function Hero() {
           initial={prefersReducedMotion ? false : 'hidden'}
           animate="visible"
         >
+          <motion.p className="hero-kicker" variants={heroItemVariants}>
+            {site.name} <span>·</span> Computer Engineering
+          </motion.p>
           <motion.h1
             className="hero-title"
             variants={heroItemVariants}
           >
-            Engineering the cloud. <span className="hero-accent-name">Exploring what&apos;s next.</span>
+            <span>Engineering the cloud.</span>
+            <span className="hero-accent-name">Exploring what&apos;s next.</span>
           </motion.h1>
           <motion.p
             className="hero-intro-copy"
@@ -82,19 +100,23 @@ export function Hero() {
             I&apos;m {site.name}, a final-year Computer Engineering student specializing in Cloud Computing. I build and experiment with cloud infrastructure, automation, and AI-powered applications, with a strong interest in reliable, scalable, and intelligent systems.
           </motion.p>
 
-          <motion.ul
+          <motion.div
             className="hero-specialties"
             variants={heroItemVariants}
           >
-            {['Cloud & Infrastructure', 'DevOps & Automation', 'AI Engineering'].map((specialty) => (
-              <li
-                key={specialty}
-                className="hero-specialty"
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.span
+                key={specialties[activeSpecialty]}
+                className="hero-specialty-label"
+                initial={prefersReducedMotion ? false : { opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={prefersReducedMotion ? undefined : { opacity: 0, y: -8 }}
+                transition={{ duration: 0.25 }}
               >
-                {specialty}
-              </li>
-            ))}
-          </motion.ul>
+                {specialties[activeSpecialty]}
+              </motion.span>
+            </AnimatePresence>
+          </motion.div>
 
           <motion.div
             className="hero-actions"

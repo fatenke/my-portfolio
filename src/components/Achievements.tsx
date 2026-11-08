@@ -51,7 +51,11 @@ export function Achievements() {
                                     data-image-index={imageIndex}
                                   >
                                     <img
-                                      className={`achievement-image achievement-image-${image.fit}`}
+                                      className={[
+                                        'achievement-image',
+                                        `achievement-image-${image.fit}`,
+                                        image.focus ? `achievement-image-focus-${image.focus}` : '',
+                                      ].filter(Boolean).join(' ')}
                                       src={image.src}
                                       alt={image.alt}
                                       loading="lazy"

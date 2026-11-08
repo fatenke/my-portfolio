@@ -36,6 +36,7 @@ export type AchievementItem = {
     src: string
     alt: string
     fit: 'contain' | 'cover'
+    focus?: 'lower'
   }[]
 }
 
@@ -163,6 +164,12 @@ export const achievements: AchievementItem[] = [
         src: '/events/telco-day-2026/image2.png',
         alt: 'ESPRIT Telco Day 2026 team photo',
         fit: 'cover',
+      },
+      {
+        src: '/events/telco-day-2026/image3.jpeg',
+        alt: 'ESPRIT Telco Day 2026 event photo',
+        fit: 'cover',
+        focus: 'lower',
       },
     ],
   },

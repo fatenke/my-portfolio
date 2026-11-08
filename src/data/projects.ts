@@ -43,7 +43,7 @@ export const projects: Project[] = [
     description:
       'ProcMap is a software engineering project focused on understanding how procedures and services connect within a codebase or operational workflow. The application combines a frontend for interactive exploration and a backend API for dependency analysis, with GitLab integration and Linux-based deployment in mind. The goal is to make hidden dependencies easier to understand and reason about.',
     tech: ['React', 'TypeScript', 'Java', 'Spring Boot', 'REST APIs', 'GitLab', 'Linux'],
-    videoUrl: '/videos/Capture-procmap.mov',
+    videoUrl: '/videos/Capture-procmap.mp4',
     status: 'Completed',
     repoUrl: 'https://github.com/your-github/procmap',
     architecture: ['React frontend', 'Spring Boot APIs', 'Dependency analysis layer', 'GitLab integration', 'Linux deployment'],
