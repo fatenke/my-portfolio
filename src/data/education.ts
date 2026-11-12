@@ -1,3 +1,5 @@
+import { publicAsset } from '../config/publicAsset'
+
 export type EducationItem = {
   period: string
   title: string
@@ -13,7 +15,7 @@ export const education: EducationItem[] = [
     title: 'Engineering Degree in Computer Engineering, Cloud Computing specialization',
     institution: 'ESPRIT — École Supérieure Privée d’Ingénierie et de Technologies',
     institutionShortName: 'ESPRIT',
-    logoUrl: '/esprit-logo.png',
+    logoUrl: publicAsset('esprit-logo.png'),
     location: 'Tunis',
   },
   {
@@ -21,7 +23,7 @@ export const education: EducationItem[] = [
     title: "Bachelor's Degree in Computer Systems Engineering",
     institution: 'ISSAT Gafsa — Institut Supérieur des Sciences Appliquées et de Technologie de Gafsa',
     institutionShortName: 'ISSAT Gafsa',
-    logoUrl: '/issat-logo.png',
+    logoUrl: publicAsset('issat-logo.png'),
   },
 ]
 
@@ -48,7 +50,7 @@ export const achievements: AchievementItem[] = [
     category: 'Certification',
     images: [
       {
-        src: '/certifications/llm-zoomcamp-certificate.jpg',
+        src: publicAsset('certifications/llm-zoomcamp-certificate.jpg'),
         alt: 'DataTalks.Club LLM Zoomcamp 2026 certificate',
         fit: 'contain',
       },
@@ -61,7 +63,7 @@ export const achievements: AchievementItem[] = [
     category: 'Certification',
     images: [
       {
-        src: '/certifications/Cisco_Networking_Academy_Capture_the_Flag_2026_certificate.jpg',
+        src: publicAsset('certifications/Cisco_Networking_Academy_Capture_the_Flag_2026_certificate.jpg'),
         alt: 'Cisco Networking Academy Capture the Flag 2026 certificate',
         fit: 'contain',
       },
@@ -74,7 +76,7 @@ export const achievements: AchievementItem[] = [
     category: 'Certification',
     images: [
       {
-        src: '/certifications/CCNA-_Switching-_Routing-_and_Wireless_Essentials_certificate.jpg',
+        src: publicAsset('certifications/CCNA-_Switching-_Routing-_and_Wireless_Essentials_certificate.jpg'),
         alt: 'Cisco CCNA Switching, Routing, and Wireless Essentials certificate',
         fit: 'contain',
       },
@@ -87,17 +89,17 @@ export const achievements: AchievementItem[] = [
     category: 'Competition',
     images: [
       {
-        src: '/competition/real-madrid-cisco-challenge/image1.jpg',
+        src: publicAsset('competition/real-madrid-cisco-challenge/image1.jpg'),
         alt: 'Cisco Real Madrid Challenge event photo',
         fit: 'cover',
       },
       {
-        src: '/competition/real-madrid-cisco-challenge/image2.jpg',
+        src: publicAsset('competition/real-madrid-cisco-challenge/image2.jpg'),
         alt: 'Cisco Real Madrid Challenge finalist photo',
         fit: 'cover',
       },
       {
-        src: '/competition/real-madrid-cisco-challenge/image3.jpg',
+        src: publicAsset('competition/real-madrid-cisco-challenge/image3.jpg'),
         alt: 'Cisco Networking Academy Learn-A-Thon 2026 certificate from the challenge folder',
         fit: 'contain',
       },
@@ -110,17 +112,17 @@ export const achievements: AchievementItem[] = [
     category: 'Competition',
     images: [
       {
-        src: '/competition/smart-compus-hackathon/image1.png',
+        src: publicAsset('competition/smart-compus-hackathon/image1.png'),
         alt: 'ESPRIT Smart Campus Hackathon 2026 photo',
         fit: 'cover',
       },
       {
-        src: '/competition/smart-compus-hackathon/image2.png',
+        src: publicAsset('competition/smart-compus-hackathon/image2.png'),
         alt: 'ESPRIT Smart Campus Hackathon 2026 team photo',
         fit: 'cover',
       },
       {
-        src: '/competition/smart-compus-hackathon/image3.png',
+        src: publicAsset('competition/smart-compus-hackathon/image3.png'),
         alt: 'ESPRIT Smart Campus Hackathon 2026 award photo',
         fit: 'cover',
       },
@@ -133,17 +135,17 @@ export const achievements: AchievementItem[] = [
     category: 'Community',
     images: [
       {
-        src: '/events/telco-day-2025/image1.png',
+        src: publicAsset('events/telco-day-2025/image1.png'),
         alt: 'ESPRIT Telco Day 2025 event photo',
         fit: 'cover',
       },
       {
-        src: '/events/telco-day-2025/image2.png',
+        src: publicAsset('events/telco-day-2025/image2.png'),
         alt: 'ESPRIT Telco Day 2025 team photo',
         fit: 'cover',
       },
       {
-        src: '/events/telco-day-2025/image3.png',
+        src: publicAsset('events/telco-day-2025/image3.png'),
         alt: 'ESPRIT Telco Day 2025 group photo',
         fit: 'cover',
       },
@@ -156,17 +158,17 @@ export const achievements: AchievementItem[] = [
     category: 'Community',
     images: [
       {
-        src: '/events/telco-day-2026/image1.png',
+        src: publicAsset('events/telco-day-2026/image1.png'),
         alt: 'ESPRIT Telco Day 2026 event group photo',
         fit: 'cover',
       },
       {
-        src: '/events/telco-day-2026/image2.png',
+        src: publicAsset('events/telco-day-2026/image2.png'),
         alt: 'ESPRIT Telco Day 2026 team photo',
         fit: 'cover',
       },
       {
-        src: '/events/telco-day-2026/image3.jpeg',
+        src: publicAsset('events/telco-day-2026/image3.jpeg'),
         alt: 'ESPRIT Telco Day 2026 event photo',
         fit: 'cover',
         focus: 'lower',

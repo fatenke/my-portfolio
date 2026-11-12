@@ -1,3 +1,5 @@
+import { publicAsset } from '../config/publicAsset'
+
 export type ProjectCategory = 'All' | 'Cloud & DevOps' | 'AI & RAG' | 'Full Stack'
 
 export type Project = {
@@ -24,7 +26,7 @@ export const projects: Project[] = [
     description:
       'The project is designed around a document-first RAG workflow for technical support. It ingests DevOps documentation, splits it into manageable chunks, embeds the content, and stores it in a vector database for semantic retrieval. The assistant then combines retrieved context with LLM responses to provide grounded, documentation-aware guidance for troubleshooting tasks.',
     tech: ['RAG', 'Qdrant', 'Embeddings', 'BGE-small-en-v1.5', 'Python', 'Vector Search', 'Prompt Engineering', 'BM25'],
-    videoUrl: '/videos/capture-devops-assistant.mp4',
+    videoUrl: publicAsset('videos/capture-devops-assistant.mp4'),
     status: 'In progress',
     repoUrl: 'https://github.com/fatenke/devops-troubleshooting-assistant',
     architecture: ['Documents', 'Chunking', 'Embeddings', 'Qdrant', 'Retrieval', 'LLM Response'],
@@ -43,7 +45,7 @@ export const projects: Project[] = [
     description:
       'ProcMap is a software engineering project focused on understanding how procedures and services connect within a codebase or operational workflow. The application combines a frontend for interactive exploration and a backend API for dependency analysis, with GitLab integration and Linux-based deployment in mind. The goal is to make hidden dependencies easier to understand and reason about.',
     tech: ['React', 'TypeScript', 'Java', 'Spring Boot', 'REST APIs', 'GitLab', 'Linux'],
-    videoUrl: '/videos/Capture-procmap.mp4',
+    videoUrl: publicAsset('videos/Capture-procmap.mp4'),
     status: 'Completed',
     repoUrl: 'https://github.com/your-github/procmap',
     architecture: ['React frontend', 'Spring Boot APIs', 'Dependency analysis layer', 'GitLab integration', 'Linux deployment'],

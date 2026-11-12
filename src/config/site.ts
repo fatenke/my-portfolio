@@ -1,3 +1,5 @@
+import { publicAsset } from './publicAsset'
+
 export type SiteConfig = {
   name: string
   title: string
@@ -15,7 +17,7 @@ export const site: SiteConfig = {
   email: 'kerroufaten729@gmail.com',
   linkedinUrl: 'https://www.linkedin.com/in/faten-kerrou/',
   githubUrl: 'https://github.com/fatenke',
-  cvUrl: '/cv.pdf',
+  cvUrl: publicAsset('cv.pdf'),
   location: 'Tunis, Tunisia',
   objective:
     'Find a six-month final-year internship (PFE) in Cloud Engineering, DevOps, or AI engineering.',

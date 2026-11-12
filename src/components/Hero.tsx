@@ -2,6 +2,7 @@ import { ArrowRight, BrainCircuit, Cloud } from 'lucide-react'
 import { AnimatePresence, motion, useReducedMotion, type Variants } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { site } from '../config/site'
+import { publicAsset } from '../config/publicAsset'
 
 const specialties = ['Cloud & Infrastructure', 'DevOps & Automation', 'AI Engineering']
 
@@ -70,7 +71,7 @@ export function Hero() {
           <span className="hero-profile-halo" aria-hidden="true" />
           <div className="hero-profile-ring" />
           <img
-            src="/photo.png"
+            src={publicAsset('photo.png')}
             alt={`${site.name} portrait`}
             className="hero-portrait"
             fetchPriority="high"

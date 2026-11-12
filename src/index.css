@@ -168,7 +168,7 @@ main > section {
 }
 
 main > section:not(#home) {
-  padding-inline: clamp(1rem, 2vw, 2rem);
+  padding-inline: clamp(1.25rem, 4vw, 3.5rem);
 }
 
 main > section + section {
@@ -610,6 +610,7 @@ main > section:not(#home) {
   align-items: center;
   gap: clamp(3rem, 7vw, 7rem);
   margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 3.5rem);
 }
 
 .hero-profile {
@@ -1271,7 +1272,7 @@ main > section:not(#home) {
 .page-footer {
   width: min(100%, 110rem);
   margin-inline: auto;
-  padding: 0 clamp(0.75rem, 1.5vw, 1.5rem) 2.5rem;
+  padding: 0 clamp(1.25rem, 4vw, 3.5rem) 2.5rem;
 }
 
 .footer-panel {
@@ -1338,7 +1339,7 @@ main > section:not(#home) {
   justify-content: space-between;
   gap: 1rem;
   margin-inline: auto;
-  padding: 0.75rem clamp(1rem, 2vw, 2rem);
+  padding: 0.75rem clamp(1.25rem, 4vw, 3.5rem);
 }
 
 .site-brand {
